@@ -1,0 +1,24 @@
+Console and Source Tabs
+-----------------------
+Console Tab
+    > Run JS commands
+    > Inspect objects that live in the Sources tab 
+    > Call functions (able to test them)
+    > Very good for experimenting and debugging
+
+Sources Tab
+    > Reads JS
+
+How to use "Sources":
+    > Open JS files in the site that are loaded
+    > Fund function names
+    > Look for references to "window", as these are accessible commands that could be used in the "Console" tab 
+    > Some functions can make network requests that are visible in the "Network" tab
+
+Promise/Await
+    > Some functions are asynchronous
+    > They execute separately from regular code
+    > Async functions return a promise (returns data at some point in the future)
+    > Await tells the browser to...
+        > Wait for the promise of a result
+        > Shows the result
