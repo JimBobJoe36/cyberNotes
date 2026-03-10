@@ -1,0 +1,206 @@
+Layer 4 - Transport
+-------------------
+Contains...
+    > TCP
+    > UDP 
+
+The "brain" of the OSI Model
+
+Responsible for:
+    > Reliable data delivery
+    > End-to-end communication between devices
+
+Key Functions:
+    > Flow Control
+    > Data segmentation
+    > Error detection and correction
+
+-------------------
+TCP vs UDP
+-------------------
+Transmission Control Protocol (TCP)
+    > Connection orientated
+    > Reliable delivery with error checking
+    > Slower, but more accurate
+
+User Datagram Protocol (UDP)
+    > Connectionless
+    > Faster, but less reliable 
+    > No error correction
+
+-------------------
+Use Cases
+-------------------
+TCP (Used more, more secure):
+    > Web browsing
+    > Email
+    > File transfers
+
+UDP (Used less often, less secure):
+    > Gaming
+    > Live streaming
+    > Voice over Internet Protocol (VoIP)
+
+How does TCP work?
+    > Three-Way Handshake
+        > SYN -> SYN-ACK -> ACK
+            Synchronization / Acknowledge
+    
+    > Data Transfer:
+        > Segments numbered and acknowledged
+
+    > Error Correction:
+        > Missing segments trigger retransmission
+
+    > Flow Control:
+        > Prevents congestion using a sliding window
+
+How does UDP work?
+    > Connectionless: 
+        > No handshake or acknowledgement
+    
+    > Fire-and-Forget:
+        > Packets are sent without confirmation
+        > No guarantee of delivery
+
+UDP assumes the application can handle mistakes. TCP assumes it can't.
+
+-------------------
+Cyber Concerns/Consideration
+-------------------
+TCP has issues with...
+    > SYN Flood attack
+        > Overwhelms a server by exploiting the handshake process
+        > Server waits for an acknowledgement from the initial port, with the host not responding
+    > Session Hijacking
+        > Attacker intercepts and manipulates active TCP sessions
+        > Usually through a middle-man 
+
+UDP has issues with...
+    > Lots of packets (could DDoS with UDP, overloading servers/wires)
+    > No error-checking (easier to inject malicious payloads)
+
+Cyber Security Best Practices
+    > Use firewalls to filter traffic
+    > Implement rate limiting to prevent flooding
+        > Rate limiting tells the server when to terminate the connection
+
+    > Use encryption for secure transmission 
+-------------------
+Firewalls + NetStat
+-------------------
+NetStat:
+    > Command-line Command
+    > Key Points:
+        > Active Connections 
+            > Tracks IPs, ports, and connection states
+        > Real-Time Analysis: Useful for troubleshooting and security audits
+
+NetStat Cheatsheet
+    > NetStat -ano: Connections + listenig + Process ID (PID)
+    > NetStat -an | findstr LISTEN: Just listening ports
+    > NetStat -an | findstr ESTABLISHED: Active TCP sessions
+    > Tasklist /fi "PID eq ####": Identify the program PID
+
+NetStat States 
+    > Listening = server waiting for connection
+    > SYN_SENT = client asked to connect (first step of three-way handshake)
+    > SYN_RECIEVED = server got SYN, sent SYN_ACK (second step)
+    > Established = handshake done, data can flow 
+    > TIME_WAIT = connection closed, doing cleanup
+    > UDP does not show states, as UDP doesn't create connections
+
+Firewalls
+    > A security tool that monitor and control network traffic based on rules
+        > Blocks unauthorized access
+        > Filters malicious traffic 
+        > Protects networks and devices 
+    
+Firewall rules:
+    > Direction (inbound/outbound)
+    > Action (allow/block)
+    > Protocol (TCP/UDP)
+    > Port 
+    > Remote IP (optional): who is allowed/blocked
+    > Program (optional): block "python.exe" vs "port 5000"
+
+How do Firewalls work?
+    > Works across multiple OSI layers
+    > Packet Filtering (Layer 3)
+        > Checks data packets for IP, Port, and protocol
+    > Stateful Inspection (Layer 4)
+        > Tracks connection states
+    > Application Filtering (Layer 7)
+
+ACL = Router Firewall (Layer 4)
+    > ACL are rules a router uses to prevent data flow 
+
+-------------------
+Virtual Private Network (VPN)
+-------------------
+What IS a VPN?
+    > Creates an encrypted tunnel for network traffic 
+    > Protects data as it travels across internet
+    > Common usage:
+        > Public Wi-Fi Protection (most common)
+        > Remote access to private networks
+    > VPNs protect the traffic, not the identity
+    > Operates on Layer 4
+    > Many VPNs use UDP instead of TCP
+    > UDP allows...
+        > Avoids TCP-over-TCP problems
+        > Control encryption and sessions
+    > Reliability is handled inside of the tunnel
+    > Slows down connections, due to having to send it to a middle-man
+
+How is a VPN?
+    > Wraps your data packets in another packet, replacing the destination IP with the provider's server IP.
+    > The original packet still contains the initial IP
+
+Without a VPN...
+    > Router and ISP can see:
+        > Your real IP 
+        > Websites that you visit
+    > Public networks can:
+        > Monitor traffic
+        > Perform man in the middle attacks
+
+With a VPN...
+    > Router and ISP see:
+        > You are talking to a computer/server on the internet, but cannot tell what you are talking about
+            > Cannot see final destination of packets 
+        > They can probably tell if you use a VPN.
+    > The outside internet can see:
+        > Websites visited
+        > Cannot see who is trying to visit 
+    
+    [NOTE] Cyber identity can still be compromised [/NOTE]
+
+[Server -> LAN -> ISP] (Can see IP, but not destination)-> VPN -> [Destination] (sees destination, but not IP)
+
+Trust tradeoffs:
+    > Using a VPN changes who you trust:
+        > Without a VPN -> trust ISP and local network
+        > With a VPN -> trust a VPN provider
+    
+    [QUESTION] Do you trust the VPN more than your ISP? [/QUESTION]
+
+VPN Myths
+    > VPNs do NOT...
+        > Make you anonymous
+        > Stop malware
+        > Make illegal activity legal
+    > VPNs DO...
+        > Protect against local network attackers
+        > Encrypts traffic in transit
+        > Allows you to watch foreign streaming services
+
+Fingerprinting & Tracking
+    > VPNs hide content, not existence of traffic
+    > VPNs will use same IP address, often for all customers
+        > This means websites may think of your connection as a bot, or less trustworthy
+        > More CAPTCHAs
+    > Identity is more than an IP address
+        > Sign in credentials to apps (the "key" to the cipher)
+        > Browsing behavior (social engineering)
+
