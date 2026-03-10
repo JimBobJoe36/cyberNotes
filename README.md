@@ -6,3 +6,5 @@ To clone:
 cd [directory to clone to]
 git clone https://github.com/JimBobJoe36/cyberNotes
 ```
+
+All notes are in the .txt format, which can either be viewed in GitHub, or a text editor such as Notepad or Notepad ++.
