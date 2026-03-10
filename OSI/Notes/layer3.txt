@@ -1,0 +1,149 @@
+IP Addresses and Networking
+Layer 3 of the OSI Model (NETWORK LAYER)
+----------------------------
+Addresses in the real world...
+    > Have an address 
+    > Neighborhoods have boundries
+        > Multiple streets have same numbers, but different street names
+    > Range of addresses given by the city/developers
+
+Addresses in the Cyber World...
+    > MAC address (Layer 2)
+        > Physical address
+        > Assigned by manufacturer
+    
+    IP Address (Layer 3)
+        > Logical address
+        > Assigned based on network 
+        > Used across networks
+            > Separated by subnets
+----------------------------
+Breaking down an IP address
+----------------------------
+192.168.1.10/24
+11000000.10101000.00000001.00001010
+
+"/24" = Subnet (Network) Mask
+    > Helps tell how many computers exist
+    > 32 bit value
+    > Tells how many bits are locked (11000000.10101000.00000001.|00001010) [Bits after the "|" can be changed, based on the "/24"]
+
+Reserved IPs
+    > Network ID
+        > First (highest) address in range 
+    
+    > Broadcast Address
+        > The last (highest) address in the range
+
+Private IP ranges:
+    > Used in private networks, not routable in public networks
+    > Designed to conserve space
+
+Public IP Ranges:
+    > Globally unique
+    > Assigned by ISPs
+        > Entire residence has ONE public IP
+    > Why do we share?
+        > Billions of devices on the internet (over 3 billion currently)
+        > IPv4 only allows about ~4.3 billion 
+        > This was why IPv6 was created
+
+----------------------------
+Routers and Routing Packets
+----------------------------
+Layer 3 of the OSI Model (Network Layer)
+    > Handles logical addressing (IP addresses)
+    > Decides where packets go next
+    > Allows communication between different networks 
+
+What is a router?
+    > A device that fowards data between different networks/subnets
+    > Uses IP addresses and subnets to make fowarding decisions
+    > Separates broadcast domains
+
+    > Routers have one IP address per interface
+        > Usually one external and one internal
+        > Each inteface connects to a different subnet
+    > Routers separate LANs
+
+Simple network layout
+    LAN 1: [PC <- Switch] <- (192.168.0.0/24) (.1) Router (.1) (192.168.1.0/24)-> LAN 2: [Switch -> PC]
+
+    [NOTE] The router has a different IP address based on the LAN
+
+PCs Need Default Gateways
+    > The default gateway points the computer towards other networks
+
+    > The default gateway is the router IP address on the same subnet as the PC
+    > Without a default gateway, a computer has no idea where to send packets 
+
+The Power of Subnets
+    > A subnet is a smaller network (Similar to VLANs in Layer 2) where a group of devices share the same network portion of an IP address 
+        > Reduce congestion
+        > Enhance security (Isolation)
+        > Simplify Troubleshooting
+
+----------------------------
+Packets and Frames
+----------------------------
+Packets:
+    > Contains a source IP, destination IP, and data 
+    > Put in a Frame (so switches can undersand them):
+        > Contains a source MAC address, a destination MAC address
+    
+    > Router unpacks frame (reads IP addresses)
+    > Router packs the packet back into the frame
+    > Computer recieves frame, unpacks it after checking the MAC and IP address with its own
+
+    PC -> Switch -> Router -> Switch -> PC
+
+Address Resolution Protocol (ARP):
+    > ARP is used to map an IP address to a MAC address
+        > Connects Layer 2 and Layer 3
+    > Devices use IP addresses for logical communication
+    > Data at the physical layer travels via MAC addresses 
+
+How does ARP work?
+    > The device broadcasts an ARP request (gets the MAC address from a specific IP)
+    > Target responds and we update our ARP table
+
+Problems with ARP:
+    > ARP has NO authentication
+    > Devices trust the first reply they hear
+    > ARP tables can be lied to (ARP poisoning) [Can be mitigated by creating smaller subnets, isolating computers]
+
+ARP is also...
+    > Event based "I need this"
+        > Triggered by communication
+            > "Who has this IP"
+            > Happens before sending a frame
+            > Updated ARP Table on demand
+        
+    > Gratuitous "Here's my info"
+        > No request subnet
+            > Announces IP -> MAC mapping
+            > Updates ARP table automatically
+            > Can be abused for ARP poisoning
+
+----------------------------
+Internet Control Message Protocol (ICMP)
+----------------------------
+ICMP Basics
+    Protocol used for...
+        > Network Diagnostics
+        > Error Handling
+
+    Works on Layer 3
+    No connection made between devices, just request/response
+
+What is a "Ping"?
+    > Sends an ICMP Echo Request packets to a Target
+    > Target responds with an Echo Reply if reachable
+
+    Measures:
+        > Latency
+        > Packet Loss
+
+What is "Traceroute"?
+    > Network command that maps the path packets from the source to the destination
+    > Works by sending ICMP Echo requests, and uses the TTL to increases the values each hop.

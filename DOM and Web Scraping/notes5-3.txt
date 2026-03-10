@@ -1,0 +1,35 @@
+Network Tab and Better Scraping
+-------------------------------
+What is a web API?
+    > A Web API is a way for software to request and recieve data (often use HTTP requests)
+    > Often returns...
+        > JSON
+        > Status codes
+        > HTML
+
+What does the network tab actually do?
+    > Shows...
+        > HTTP Requests (made by browser)
+        > HTTP Responses
+            > HTML
+            > CSS
+            > JavaScript
+            > Images
+            > JSON/API data
+    > Every time the browser needs something, it makes a request.
+
+How to filter noise:
+    > Filter by type (Seen above graph)
+    > Fetch/XHR (Important, JSON Data)
+
+What to look for:
+    > The Endpoint/Path
+    > What method was used?
+    > Does the response look like JSON?
+    > Does the data match the page?
+    > Is it uesful for the tool?
+
+Why think about endpoints?
+    > Documented: Described for developers
+    > Observed: Seen during browsing in network
+    > Hidden/Extra: Other functions not seen normally, but can be found through brute force

@@ -1,0 +1,42 @@
+--------------------------
+DOM and Web Scraping
+--------------------------
+When you visit a website:
+    > Browser sends server request for HTML 
+    > Server sends back HTML and list of resources
+    > Browser collects data and builds the DOM
+
+Document Object Model (DOM):
+    > Structured Tree is a representation of a webpage 
+    > It turns HTML into something the browser understands
+    > Every visual element becomes a node
+
+DevTools = DOM Viewer:
+    > The elements panel shows:
+        > Tags
+        > Classes
+        > IDs
+        > Nesting
+        > Structure
+
+What is Web-Scraping?
+    > Automatic scraping/extracting structured data from web page 
+    > Instead of manually copying the prices
+    > We...
+        > Write Code
+        > Parse HTML 
+        > Extract data 
+
+How does Web Scraping work?
+    > Step 1: Request HTML 
+    > Step 2: Parse HTML
+    > Step 3: Search DOM 
+    > Step 4: Extract data 
+
+Why security people care:
+    > Attackers scrape data
+    > Bots scrape prices
+    > Competitors scrape listings
+    > Security analysts inspect DOM structure 
+    > Some backup the internet (internet archives/wikipedia backups)
+
