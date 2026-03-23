@@ -47,4 +47,6 @@ Most common web vulnerabilities:
     > Insecure Design
     > Security Misconfiguration
     > Outdated Components
-
+    > Security logging failures
+    > Authentication issues
+    > Error handling
