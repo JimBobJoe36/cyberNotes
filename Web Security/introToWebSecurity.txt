@@ -1,0 +1,50 @@
+.- .-. - .. ..-. .. -.-. .. .- .-.. | .. -. - . .-.. .-.. .. --. . -. -.-. . | ... .... .- .-.. .-.. | -. --- - | -... . | ..- ... . -.. | .. -. | - .... . | - .- -.- .. -. --. | --- ..-. | - .... . ... . | -. --- - . ...
+----------------------------
+Why Web Security Matters
+----------------------------
+Why should we care about securing websites?
+    > Personal information exposure
+    > Financial data theft
+    > Reputational damage for companies
+    > Loss of data integrity
+
+What happens if security fails?
+    > Companies lose quite a bit of money
+    > Users lose...
+        > Passwords
+        > Credit cards
+        > Identity
+    > Some bugs have even...
+        > Crashed planes
+        > Impacted healthcare systems
+
+----------------------------
+What is a vulnerability?
+----------------------------
+A vulnerability is a weakness in a system that the attaker can exploit.
+    > Ex.
+        > Bad input validation
+
+What is a "Zero-Day"?
+    > A Zero-Day is a vulnerability that developers do NOT know about
+        > Becomes a "Zero-Day" exploit if used by attackers
+    > The developer has "zero days" to fix integrity
+    > This is opposed to known vulnerabilities which patches exist, but need to be applied
+
+Known Vulnerabilities
+    > Most attacks are NOT zero-days.
+        > Ex: Equifax breach
+            > Patch existed, but was not installed
+            > Cost the company over $10 Billion
+
+----------------------------
+The OWASP
+----------------------------
+Most common web vulnerabilities:
+    > Broken Access Control (Elevated permissions)
+    > Cryptographic Failures (Messages not encrypted correctly, or with an insecure cipher)
+    > Injection Attacks (SQLi, XSS [Cross Site Scripting])
+    > Insecure Design
+    > Security Misconfiguration
+    > Outdated Components
+
