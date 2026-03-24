@@ -1,0 +1,47 @@
+----------------------------
+SQL Injection
+----------------------------
+[WARNING] Using SQL Injection is ILLEGAL, and a federal crime
+
+What is SQL?
+    > Structured Query Language
+    > Used by websites/programs to interact with databases
+    > Ex.
+        > SELECT * FROM users WHERE username = 'admin' AND password = '1234';
+            > Selects everything fromm a table that fits the criteria
+
+Simple Database Structure
+    > Similar to tables in Google Docs
+    > CSVs are also a table
+    > Ex.
+        > User Table:
+            id, username, password
+            1, admin, 1234
+            2, alice, apple 
+        > Order Table 
+            id, user_id, product
+            1, 2, Laptop
+            2, 2, Mouse
+        > Who ordered the equipment? (Use te user_id column)
+
+What is SQL Injection?
+    > A way attackers trick SQL queries using input fields
+    > Examples include adding an always true condition ("1=1", or something similar), or commenting ("--" in SQL) out the rest of the query.
+    > Can lead to unauthorized access 
+
+Why does SQL Injection matter?
+    > Attackers can...
+        > Log in without passwords
+        > Access other users' data
+        > Read private information 
+        > Sometimes delete/change data 
+    > This is one of THE most common attacks/web vulnerabilities
+
+How to prevent it?
+    > Do NOT trust user input
+    > Validate/Sanitize input 
+        > Only expected data (usernames, not symbols)
+        > "htmlspecialchars()" in PHP is an example of sanitizing input
+    > Use parameterized queries (advanced)
+        > Keep user input separate from SQL code
+    > Use database permissions
