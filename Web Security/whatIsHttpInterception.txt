@@ -1,0 +1,38 @@
+What is HTTP Interception?
+--------------------------
+HTTP Interception is...
+    > Websites communicate with HTTP requests
+    > Interception means capturing/stopping the request BEFORE it gets to the server
+        > Attackers can modify the request and foward it to the server, as well
+
+What is "Burp Suite"?
+    > Burp Suite is a tool used by security professionals and attackers
+    > It lets you...
+        > Intercept requests
+        > Modify data
+        > Send requests manually
+    > Burp gives someone control over what the server recieves
+
+What does the workflow of the Burp Suite look like?
+    > Typical:
+        > Browser -> Website 
+    > With Burp:
+        > Browser -> Burp -> Website
+    > Attacker:
+        > You -> Insecure Wi-Fi -> Burp -> Website
+
+What can attackers do?
+    > See sensitive data
+        > Passwords, tokens, user actions
+    > Modify requests in real time
+        > Altering prices, modifying a user ID
+    > Bypass client-side protections
+        > Ignore what website UI "allows"
+    > General Exploit of Trust:
+        > Server assumes request is legitimate
+
+How do you prevent this?
+    > Don't trust the user/browser
+    > Check EVERYTHING in the data
+    > Only allow valid data
+
