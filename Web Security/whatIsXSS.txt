@@ -1,0 +1,33 @@
+-----------------------------------
+What is Cross-Site Scripting (XSS)?
+-----------------------------------
+XSS is defined as...
+    > A vulnerability that allows attackers to inject malicious code into web pages to be viewed by others
+        > Usually JavaScript
+    > Runs on Victim's browser, not on the server [!!!] IMPORTANT [!!!]
+    > Often caused by unsanitized user input
+    > The heart of most JS WORM attacks
+
+The Power of XSS -- Twitter Worm (2009):
+    > A user injected JS to their profile bio 
+    > Anyone who viewed the profile got infected
+    > Auto posted from the infected account
+    > Over 200,000 profiles infected in hours
+
+Why is XSS dangerous?
+    > Attackers can..
+        > Steal cookies (session hijacking)
+        > Redirects users to fake sites
+        > Defaces pages
+        > Logs keystrokes
+    
+    > Is usually invisible to most users 
+        > Browser cannot tell a good script from a bad one
+
+Save vs. Unsafe (JS):
+    > Unsafe:
+        > element.innerHTML = username
+        > innerHTML: treat value like code
+    > Safe (sanitized):
+        > element.textContent = username
+        > textContent: whatever the value, shown as text
