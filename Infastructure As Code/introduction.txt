@@ -1,0 +1,26 @@
+Code Running Problems
+---------------------
+Why may a Python app not work on someone else's computer?
+    > Lack of Python
+    > Missing dependancies
+    > Different versions of Python
+    > Different Operating Systems
+
+What is Infastructure?
+    > Everything that the app needs to run 
+        > Python (runtime)
+        > Libraries (Flask, etc.)
+        > Files (Code, data)
+        > Settings (Ports, configs)
+        > Hardware (CPU, memory)
+
+Infastructure as Code (IaC) means defining everything your app needs to run in a file 
+    > This file sets up the environment for you, instead of clicking or installing things manually
+    > Some cost for initial setup, but faster for every future build
+
+Why does IaC matter?
+    > Same setup every time
+    > Faster to run apps
+    > Fewer mistakes
+    > Easier to share projects
+
