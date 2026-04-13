@@ -1,0 +1,35 @@
+Docker (YIPPEE!!!) and Containers
+---------------------------------
+Back in the day...
+    > "Traditional" way of business was running applicatios on servers
+    > Usually ONE application per server
+        > Security separations
+    > Very expensive
+    > Server doesn't use full server capabilities (CPU, RAM, etc.)
+
+Virtual Machines (VMs) as IaC:
+    > Hypervisor manages VM
+    > Each VM runs its own operating system
+        > Costly CPU/Ram overhead
+        > Slow to start up
+        > Requires licenses
+    > Hardware -> Host OS-> Hypervisor -> VMs -> Service
+
+The Rise of Containers:
+    > A container is an app packaged with everything it needs to run
+        > Can run on different devices regardless of host OS
+    > NO Operating system layer
+
+What is Docker?
+    > Docker is a platform that packages applications into containers.
+        > It is lightweight: Containers share host OS
+        > Fast deployment: Starts in seconds compared to VMs, which can take minutes
+        > Portability: Runs the same on any OS, cloud provider, or Machines
+    
+How does Docker work?
+    > Docker Compose file (IaC) [Dockerfile], [docker-compose.yml]- Instructions to build the app
+        > Recipe
+    > Docker Image - Packaged app with everything inside
+        > Snapshot
+    > Docker Container - The live version of your app
+        > Running App
