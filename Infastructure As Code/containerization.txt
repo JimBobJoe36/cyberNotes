@@ -1,0 +1,36 @@
+Containerization
+-----------------
+What is Flask?
+    > Flask is a Python framework for building web applications and APIs 
+    > Why Flask?
+        > Simple/easy to use
+        > Minimal setup
+        > Works well for learning backend
+
+Intro to Dockerfiles (YIPPEE!!!)
+    > A Dockerfile is a set of step-by-step instructions to build the app's environment (docker image)
+    > Similar to...
+        > A recipie
+        > A script to install everything automatically
+
+Container Networking Basics
+    > How do Containers handle networking?
+        > Containers are isolated
+        > You cannot access the container from your browser
+    > Port Mapping: Why use `-p 7777:5000`
+        > EXPOSE 5000 opens the port inside the container
+        > `-p 7777:5000` connects your computer to the container
+
+Containers vs. Images:
+    > Containers are instances of an image
+    > You can have many containers from one image.
+
+Common Issues/Fixes
+    > Port already in use
+        > Use  `docker ps` to check running containers
+    > Changes not reflected after updating code
+        > Rebuild the image
+        > Remove old containers
+    > App not reachable in browser
+        > Check port Mapping
+
