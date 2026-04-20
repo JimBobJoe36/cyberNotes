@@ -1,0 +1,29 @@
+Multiple Containers
+-------------------
+[docker compose ____]
+-------------------
+What is a "Docker Compose" File?
+    > A docker-compose.yml describes multople containers that should run together
+        > Dockerfile = recipe for ONE app
+        > Image = packaged app
+        > Container = running app
+        > Compose = team lineup for the entire system
+
+Why is "Compose" useful?
+    > Services can talk to each other
+        > Keeps specific services private from outsiders
+    > Same setup on every computer
+    > Auto fixes crashes
+    > Easier debugging
+
+Port Exposure & Security
+    > A port only needs to be public if users need to reach it 
+        > Public Port = Open to outside connections
+        > Private Service = Only containers can access it
+    > Fewer public ports = lower risk
+    > Example:
+        > Web service = Pulic Port
+        > Database Service = Private Port
+
+Do you need both a Dockerfile and a docker-compose?
+    > Dockerfile is for making the lunch. Compose is for managing the entire cafeteria.
