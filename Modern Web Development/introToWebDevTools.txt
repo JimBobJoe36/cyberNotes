@@ -1,0 +1,33 @@
+What are some modern WebDev tools?
+----------------------------------
+What is Node?
+    > Node.js lets us run JavaScript directly on your computer, not just in a browser.
+    > Runs our development tools (such as Vite)
+    > NPM (Node Package Manager)
+        > Similar to PIP, an "App Store" for web packages
+    > Manages libraries
+
+What is React?
+    > React is a library for building "Components"
+    > Components are resuable pieces like Navbar or Cards
+        > Style things once, use it many times
+    > The Virtual DOM: React only updates the specific part of the page that changes.
+        > Allows us to hotswap components/add animations
+
+What is "Vite"?
+    > Vite is a frontend tool to host our app as we are building it
+        > It bundles our code so a server can serve it
+        > Supports React + Node.js
+    > Allows us to develop in real time
+        > You make a change and you don't need to refresh the page
+
+What is CharkraUI?
+    > Provides pre-made "Lego" components
+        > Prestyled tags like <Button> and <Input>
+        > Responsive by default
+    > Saves hours of fighting with CSS
+
+What is JSX?
+    > JSX lets us write HTML-like code directly inside our JavaScript (or TypeScript [TSX])
+    > Why not HTML?
+        > Logic + Layout: You cannot use "if" statements in HTML
