@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config| # always "2"
+    # Operating system
+    config.vm.define "fedora" do |fedora|
+        fedora.vm.box = "leading-works/fedora32-kde" # account/operating system
+        fedora.vm.box_version = "1.0.0" # Box version
+
+        fedora.vm.network "private_network", ip: "10.4.1.101", virtualbox_intnet: "intnet" # Sets up network with virtual box
+        
+        fedora.vm.provider "virtualbox" do |vb|
+            vb.name = "FedoraLinux-vagrant"
+            vb.gui = true # We want a GUI
+            vb.memory = "2048" # RAM
+            vb.cpus = 4
+        end
+    end

@@ -1,0 +1,42 @@
+Vagrant Basics
+----------------
+What is Vagrant?
+    > One of many applications that can interpret IaC
+    > It is the puppet master for VMs
+    > Write instructions for VMs with code -> Vagrant builds the VM 
+
+What is a Vagrantfile?
+    > Vagrant uses this file to build VMs
+    > Write code to build VMs the exact same way each time
+    > Not actually a programming language
+        > More like HTML than Python
+    > Vagrant file generator:
+        > https://vagrantfile-generator.vercel.app/
+    > Five key parts of a Vagrantfile
+        > Syncing
+        > Provisioning
+        > 
+        > 
+        > 
+
+Does Vagrant have a native GUI?
+    > No! It only works from command line
+    > You must use commands to tell Vagrant what to do 
+
+Basic Commands (Run in the same directory as the Vagrantfile!):
+    > vagrant up
+        > Creates VMs according to a Vagrantfile
+    > vagrant destroy
+        > Deletes the VM, but keeps the virtual disk
+    > vagrant halt
+        > Powers off the VM. Does not delete anything
+    > vagrant reload
+        > Reloads the VM with any new changes to the vagrantfile
+    > vagrant status
+        > Gives information about all VMs built by a specific file
+    > vagrant box list
+        > Lists off all virtual disks downloaded from Vagrant Cloud
+    > vagrant box remove <box_id>
+        > Deletes the specified virtual disks, but keeps the VM
+    > vagrant box add <box_id>
+        > Downloads specified virtual disks from Vagrant Cloud

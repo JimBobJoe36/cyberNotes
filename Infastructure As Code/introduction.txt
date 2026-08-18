@@ -23,4 +23,10 @@ Why does IaC matter?
     > Faster to run apps
     > Fewer mistakes
     > Easier to share projects
+    > Builds knowledge for more complex applications
 
+What commonly are applications of IaC?
+    > Vagrant
+    > Docker
+    > AWS
+    > So much more!
