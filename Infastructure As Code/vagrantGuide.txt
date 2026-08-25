@@ -15,9 +15,9 @@ What is a Vagrantfile?
     > Five key parts of a Vagrantfile
         > Syncing
         > Provisioning
-        > 
-        > 
-        > 
+        > Box 
+        > Provider
+        > Networking
 
 Does Vagrant have a native GUI?
     > No! It only works from command line
