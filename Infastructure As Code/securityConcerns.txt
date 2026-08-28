@@ -1,0 +1,26 @@
+What are some main security converns with IAC?
+    > Default Credentials
+        > Default credentials are the same throughout every download.
+        > This could lead to easy access into machines due to negligence
+    > Untrusted Sources
+        > Untrusted sources can sneak malware into the packages, compromisong machines.
+    > Lack of Isolation
+        > Failing to isolate can cause the host machine/network to get infected.
+    > Improper Restriction of Privilege
+        > The average user should not have adminsitrator permissions
+        > Failure to restrict privilege can result in a bad actor gaining access
+
+Default Credentials
+    > Change the credentials on first boot
+    > Use a strong password
+
+Untrusted Sources
+    > ALWAYS research publishers of data before downloading
+    > Check the file hash
+
+Lack of Isolation
+    > Disable shared folders
+    > Do not foward ports
+
+Improper Restriction of Privilege
+    > Require adminsitrator password for all adminsitrator actions
