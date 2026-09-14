@@ -1,0 +1,51 @@
+Two main points
+    - Just because it works, does not mean it is secure
+    - Securing software requires extra effort
+---------------
+Why is securing configurations important?
+    - Industry standards mandate certain standards
+    - Reduces risk of attack for a system
+    - Minimize vulnerabilities and attack surface
+
+Misconfiguration is defined as...
+    - Customizing settings in a way that makes a system of software insecure
+
+Attack surface is defined as...
+    - The boundaries of a system on which a hacker executes attacks
+
+Common Misconfigurations
+    - Insecure by default
+        - Most software is designed to be "user friendly"
+        - Ease-of-use is prioritized over security
+    - Default username/password (credentials)
+        - Allows easy access to data/control of software
+    - Unrestricted permissions
+        - Software often sets up user accounts with full admin access
+    - Network open to all
+        - Trying to be open, the software leaves itself open to many networks
+
+What needs to get configured?
+    - Operating Systems
+        - Manages connection between user's software and hardware
+    - Software 
+        - Apps ran on the computer for user experience
+    - Services
+        - Background tasks that allow basic functions for the user/software
+
+---------------
+Default Credentials 
+    - Can lead to full system compromise with potentially all CIA components compromised
+    - Common Default Credentials
+        - ubuntu:ubuntu (Ubuntu)
+        - pi:raspberry (Raspberry Pis)
+        - vagrant:vagrant (Vagrant VMs)
+
+Network Interface and Ports
+    - Software opens "ports" so it can be reached via network 
+    - Opening ports increases the attack surface 
+    - Ports can be opened on different network interfaces. Security depends on what is connected to the network.
+
+Permissions 
+    - Credentials allow you to restrict permissions
+    - Accounts get access to configurations with proper credentials
+    - Software likes to grant full access to itself by default

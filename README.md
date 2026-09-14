@@ -10,6 +10,9 @@ git clone https://github.com/JimBobJoe36/cyberNotes.git
 All notes are in the .txt format, which can either be viewed in GitHub, or a text editor such as Notepad or Notepad ++.
 
 # Folders
+## Applying Cyber Protections
+Goes over basic security, such as [securing configuring settings](./Applying%20Cyber%20Protections/securingVulnerableConfigurations.txt)
+
 ## DOM and Web Scraping
 Goes over basics for web scraping and the [Document Object Model](./DOM%20and%20Web%20Scraping/whatIsWebScraping.txt)
 
