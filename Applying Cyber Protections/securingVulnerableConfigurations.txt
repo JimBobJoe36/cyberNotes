@@ -35,7 +35,7 @@ What needs to get configured?
 ---------------
 Default Credentials 
     - Can lead to full system compromise with potentially all CIA components compromised
-    - Common Default Credentials
+    - Common Default Credentials [username:password]
         - ubuntu:ubuntu (Ubuntu)
         - pi:raspberry (Raspberry Pis)
         - vagrant:vagrant (Vagrant VMs)
@@ -49,3 +49,37 @@ Permissions
     - Credentials allow you to restrict permissions
     - Accounts get access to configurations with proper credentials
     - Software likes to grant full access to itself by default
+---------------
+Fixing Misconfigurations
+---------------
+Configuration files are...
+    - Files read on startup by an application
+    - Filetypes include...
+        - .conf 
+        - .ini
+        - .yml
+        - And many more!
+    - Applications must be restarted for changes to be applied!
+    - Syntax is always arbitrary
+    - Look for the main issues
+
+Differences between OSs
+    - Linux
+        - Location of config files: "/etc/<name-of-software>"
+        - Change passwords (shell): "passwd <account-name>"
+        - Restart a service (shell): "sudo systemctl restart <service>"
+        - Deleting Bloat
+            - "sudo apt list" (list applications)
+            - "sudo apt purge <package>"
+
+Security Risks in Configuration Files
+    - Default Credentials are commonly [admin:<service-name>]
+        - Changing the default credentials should be done
+    - Open Networking
+        - [0.0.0.0] - Application is listening for connections on all interfaces on a computer
+        - [127.0.0.1] - The "localhost" IP, which is only availible to apps on the same computer (more secure, but far less usable)
+            - This restricts it to the local machine, which can be useful for databases
+    - Restrict Privileges
+        - Make sure a common user can only access user resources
+    - Remove Bloat
+        - More software can lead to more potential misconfigurations, which leads to more vulnerabilities.

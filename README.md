@@ -3,7 +3,7 @@ This is a repository full of notes about Cyber, with the intended purpose of hel
 
 To clone:
 ``` powershell
-cd [directory to clone to]
+cd "[directory to clone to]"
 git clone https://github.com/JimBobJoe36/cyberNotes.git
 ```
 
@@ -14,7 +14,7 @@ All notes are in the .txt format, which can either be viewed in GitHub, or a tex
 Goes over basic security, such as [securing configuring settings](./Applying%20Cyber%20Protections/securingVulnerableConfigurations.txt)
 
 ## DOM and Web Scraping
-Goes over basics for web scraping and the [Document Object Model](./DOM%20and%20Web%20Scraping/whatIsWebScraping.txt)
+Goes over basics for web scraping and the [Document Object Model](./DOM%20and%20Web%20Scraping/whatIsWebScraping.txt), the [Developer Tools](./DOM%20and%20Web%20Scraping/consoleAndSourceTabs.txt), and [Dynamic Web Scraping](./DOM%20and%20Web%20Scraping/dynamicScraping.txt)
 
 ## Infastructure as Code
 Goes over the basics for IaC, including [Docker](./Infastructure%20As%20Code/docker.txt) and [Vagrant](./Infastructure%20As%20Code/vagrantGuide.txt)
@@ -24,10 +24,15 @@ An example [Dockerfile](./Infastructure%20As%20Code/Example%20Files/Dockerfile) 
 An example [Vagrantfile](./Infastructure%20As%20Code/Example%20Files/Vagrantfile) is provided.
 
 ## Modern Web Development
-Goes over basics, such as resource libraries, React, and other modern TypeScript
+Goes over basics, such as resource libraries, React, and [other modern TypeScript resources](./Modern%20Web%20Development/introToWebDevTools.txt)
 
 ## OSI
 Goes over the layers of the OSI model.
+- [Layer 01](./OSI/layer1.txt)
+- [Layer 02](./OSI/layer2.txt)
+- [Layer 03](./OSI/layer3.txt)
+- [Layer 04](./OSI/layer4.txt)
+- [Layers 05, 06, and 07](./OSI/layer567.txt)
 
 ## Web Security
 Goes over common web attacks, such as [SQL Injection](./Web%20Security/whatIsSQLInjection.txt) and [Cross Site Scripting](./Web%20Security/whatIsXSS.txt)
