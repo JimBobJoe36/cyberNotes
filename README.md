@@ -11,7 +11,7 @@ All notes are in the .txt format, which can either be viewed in GitHub, or a tex
 
 # Folders
 ## Applying Cyber Protections
-Goes over basic security, such as [securing configuring settings](./Applying%20Cyber%20Protections/securingVulnerableConfigurations.txt)
+Goes over basic security, such as [securing configuring settings](./Applying%20Cyber%20Protections/securingVulnerableConfigurations.txt), as well as [identifying and fixing common vulnerabilities](./Applying%20Cyber%20Protections/vulnerabilities.txt).
 
 ## DOM and Web Scraping
 Goes over basics for web scraping and the [Document Object Model](./DOM%20and%20Web%20Scraping/whatIsWebScraping.txt), the [Developer Tools](./DOM%20and%20Web%20Scraping/consoleAndSourceTabs.txt), and [Dynamic Web Scraping](./DOM%20and%20Web%20Scraping/dynamicScraping.txt)

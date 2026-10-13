@@ -1,0 +1,40 @@
+Vulnerability Terms
+-------------------
+Weakness
+    > Flaw in a computer system's software or hardware
+    > Poor security practice
+
+Vulnerability
+    > An implementation of a weakness 
+
+Exploit
+    > Some software/procedure that takes a vulnerability to compromise a system's CIA triad
+-------------------
+Analogy
+-------------------
+Protecting a valuble item
+    > Weakness: Hollow door
+    > Vulnerability: Installing the hollow door for a steel vault 
+    > Exploit: Kicking through the hollow door to access the vault
+-------------------
+Common Terminology
+-------------------
+CVE (Common Vulnerabilites and Exposures)
+    > A unique ID given to every computer vulnerability known to mankind
+    > Format
+        > CVE-YYYY-#####
+        > CVE-YEAR NUMBER-Vulnerability number 
+
+CVSS (Common Vulnerability Scoring System)
+    > An equation used to determine severity of a computer vulnerability
+    > Ranges from 1 (least) to 10 (critical)
+    > Helps answer the question, which should I work on first?
+
+CWE (Common Weaknesses Enumeration)
+    > Generic terminology used to describe a root cause or [!!!] underlying weakness [!!!] of a vulnerability
+    > Helpful in determining how to fix a vulnerability
+
+NVD (National Vulnerability Database)
+    > Combines all the information (CVE, CVSS, and CWE) together
+    > Give the CVD, and you are given the vulnerability
+        > https://nvd.nist.gov/vuln/search
